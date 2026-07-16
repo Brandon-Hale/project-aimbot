@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# ML / CV artifacts (large, regenerable)
+*.pt
+*.onnx
+*.engine
+runs/
+weights/
+datasets/
+data/
+*.mp4
+*.avi
+*.mkv
+
+# Detection logs / analytics output
+logs/
+*.jsonl
+*.csv
+outputs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
