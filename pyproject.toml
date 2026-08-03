@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gamevision"
+version = "0.1.0"
+description = "Real-time single-player game object detection & overlay"
+requires-python = ">=3.10"
+dependencies = [
+    "ultralytics>=8.3",
+    "opencv-python>=4.8",
+    "numpy>=1.24",
+    "dxcam>=0.0.5; platform_system=='Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+gamevision = "gamevision.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gamevision*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: tests that download/run the real YOLO model (slow, needs network/GPU)",
+]
+addopts = "-m 'not integration'"
