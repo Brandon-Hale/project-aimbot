@@ -6,6 +6,18 @@ __pycache__/
 venv/
 env/
 .python-version
+build/
+dist/
+*.so
+
+# Test / lint / type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
 
 # ML / CV artifacts (large, regenerable)
 *.pt
@@ -18,12 +30,16 @@ data/
 *.mp4
 *.avi
 *.mkv
+*.mov
 
 # Detection logs / analytics output
 logs/
 *.jsonl
 *.csv
 outputs/
+
+# Claude Code (personal settings stay local; shared settings.json is committed)
+.claude/settings.local.json
 
 # IDE / OS
 .vscode/
